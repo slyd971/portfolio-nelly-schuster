@@ -226,7 +226,7 @@ export default function NellySchusterPage() {
                     className="object-cover object-center"
                   />
                 </div>
-                <div className="p-5 sm:p-6">
+                <div className="hidden p-5 sm:block sm:p-6">
                   <p className="text-xl font-semibold leading-tight text-white sm:text-2xl">{owner.name}</p>
                   <p className="mt-1 text-sm text-white/60">{owner.headline}</p>
                 </div>
