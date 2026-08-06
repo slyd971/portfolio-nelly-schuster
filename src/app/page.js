@@ -152,7 +152,7 @@ export default function NellySchusterPage() {
         <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="grid items-start gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-8">
             <div className="order-2 lg:order-1 lg:pt-6">
-              <h1 className="font-display max-w-5xl text-4xl font-semibold leading-[1.02] tracking-tight sm:text-5xl md:text-6xl xl:text-[4.5rem]">
+              <h1 className="sr-only font-display max-w-5xl text-4xl font-semibold leading-[1.02] tracking-tight sm:not-sr-only sm:text-5xl md:text-6xl xl:text-[4.5rem]">
                 {owner.name}
               </h1>
 
