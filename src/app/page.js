@@ -55,6 +55,7 @@ function SectionHeading({ eyebrow, title, tone = "dark" }) {
 
 export default function NellySchusterPage() {
   const { owner } = portfolio;
+  const headlineSuffix = owner.headline.replace(/^Juriste\s*/, "");
   const featuredExperiences = portfolio.experiences.slice(0, 4);
   const olderExperiences = portfolio.experiences.slice(4);
   const heroStats = [
@@ -150,17 +151,18 @@ export default function NellySchusterPage() {
         </svg>
 
         <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div className="grid items-start gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-8">
+          <div className="grid items-start gap-5 sm:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-8">
             <div className="order-2 lg:order-1 lg:pt-6">
               <h1 className="sr-only font-display max-w-5xl text-4xl font-semibold leading-[1.02] tracking-tight sm:not-sr-only sm:text-5xl md:text-6xl xl:text-[4.5rem]">
                 {owner.name}
               </h1>
 
-              <p className="mt-7 max-w-3xl text-lg leading-8 text-white/76 sm:text-xl">
-                {owner.headline}
+              <p className="mt-3 max-w-3xl text-center text-lg leading-8 text-white/76 sm:mt-7 sm:text-left sm:text-xl">
+                <span className="font-semibold text-white">Juriste</span>
+                {headlineSuffix}
               </p>
 
-              <p className="mt-8 max-w-2xl text-sm leading-7 text-white/72 sm:text-base md:text-lg md:leading-8">
+              <p className="mt-8 max-w-2xl text-justify text-sm leading-7 text-white/72 sm:text-left sm:text-base md:text-lg md:leading-8">
                 {portfolio.summary}
               </p>
 
@@ -226,9 +228,12 @@ export default function NellySchusterPage() {
                     className="object-cover object-center"
                   />
                 </div>
-                <div className="hidden p-5 sm:block sm:p-6">
+                <div className="p-5 sm:p-6">
                   <p className="text-xl font-semibold leading-tight text-white sm:text-2xl">{owner.name}</p>
-                  <p className="mt-1 text-sm text-white/60">{owner.headline}</p>
+                  <p className="mt-1 text-sm text-white/60">
+                    <span className="font-semibold text-white">Juriste</span>
+                    {headlineSuffix}
+                  </p>
                 </div>
               </div>
             </div>
