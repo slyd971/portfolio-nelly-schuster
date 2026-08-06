@@ -137,7 +137,7 @@ export default function NellySchusterPage() {
         </div>
       </header>
 
-      <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden bg-midnight pb-16 pt-28 text-white sm:pt-32">
+      <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden bg-midnight pb-8 pt-28 text-white sm:pb-16 sm:pt-32">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="hero-motif absolute left-1/2 top-1/2 h-[140vmax] w-[140vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[conic-gradient(from_0deg,rgba(109,165,255,0.18),transparent_25%,rgba(31,36,233,0.16),transparent_60%,rgba(109,165,255,0.14))] blur-3xl" />
         </div>
@@ -200,13 +200,14 @@ export default function NellySchusterPage() {
                     </div>
                   ))}
                 </div>
-                <div className="flex justify-center flex-wrap gap-2 border-t border-white/10 pt-6 sm:justify-start sm:gap-3 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0">
+                <div className="grid w-full gap-2 border-t border-white/10 pt-5 sm:flex sm:w-auto sm:flex-wrap sm:gap-3 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0">
                   {heroLabels.map((item) => (
                     <span
                       key={item.value}
-                      className="inline-flex min-h-12 w-full max-w-[18rem] items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-center text-xs leading-5 text-white/70 sm:w-auto sm:max-w-none sm:justify-start sm:text-left sm:text-sm"
+                      className="grid min-h-[4.75rem] w-full content-center rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-3 text-center text-xs leading-5 text-white/70 sm:inline-flex sm:min-h-0 sm:w-auto sm:max-w-none sm:items-center sm:justify-start sm:rounded-full sm:px-3 sm:py-2 sm:text-left sm:text-sm"
                     >
-                      <span className="font-semibold text-white">{item.value}</span> - {item.label}
+                      <span className="block font-semibold text-white sm:inline">{item.value}</span>
+                      <span className="block sm:inline"> {item.label}</span>
                     </span>
                   ))}
                 </div>
