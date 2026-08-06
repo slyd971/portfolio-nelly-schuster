@@ -55,7 +55,6 @@ function SectionHeading({ eyebrow, title, tone = "dark" }) {
 
 export default function NellySchusterPage() {
   const { owner } = portfolio;
-  const headlineSuffix = owner.headline.replace(/^Juriste\s*/, "");
   const featuredExperiences = portfolio.experiences.slice(0, 4);
   const olderExperiences = portfolio.experiences.slice(4);
   const heroStats = [
@@ -157,9 +156,8 @@ export default function NellySchusterPage() {
                 {owner.name}
               </h1>
 
-              <p className="mt-3 max-w-3xl text-center text-lg leading-8 text-white/76 sm:mt-7 sm:text-left sm:text-xl">
-                <span className="font-semibold text-white">Juriste</span>
-                {headlineSuffix}
+              <p className="mt-3 max-w-3xl text-center text-lg font-semibold leading-8 text-white sm:mt-7 sm:text-left sm:text-xl">
+                {owner.headline}
               </p>
 
               <p className="mt-8 max-w-2xl text-justify text-sm leading-7 text-white/72 sm:text-left sm:text-base md:text-lg md:leading-8">
@@ -230,10 +228,7 @@ export default function NellySchusterPage() {
                 </div>
                 <div className="p-5 sm:p-6">
                   <p className="text-xl font-semibold leading-tight text-white sm:text-2xl">{owner.name}</p>
-                  <p className="mt-1 text-sm text-white/60">
-                    <span className="font-semibold text-white">Juriste</span>
-                    {headlineSuffix}
-                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">{owner.headline}</p>
                 </div>
               </div>
             </div>
