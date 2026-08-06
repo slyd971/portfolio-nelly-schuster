@@ -204,7 +204,7 @@ export default function NellySchusterPage() {
                   {heroLabels.map((item) => (
                     <span
                       key={item.value}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70 sm:text-sm"
+                      className="inline-flex min-h-12 w-full max-w-[18rem] items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-center text-xs leading-5 text-white/70 sm:w-auto sm:max-w-none sm:justify-start sm:text-left sm:text-sm"
                     >
                       <span className="font-semibold text-white">{item.value}</span> - {item.label}
                     </span>
