@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Design tokens sourced from sqli.com/fr-fr, see DESIGN-TOKENS.md */
+  --color-midnight: #0f0e2b;
+  --color-surface: #fffaf0;
+  --color-accent: #1f24e9;
+  --color-accent-light: #6da5ff;
+
+  --font-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes hero-drift {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.15);
+  }
+}
+
+.hero-motif {
+  animation: hero-drift 70s linear infinite;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: reveal-up 500ms ease-out both;
+}
+
+@keyframes client-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.client-marquee {
+  width: max-content;
+  animation: client-marquee 34s linear infinite;
+}
+
+.client-marquee:hover {
+  animation-play-state: paused;
+}
+
+.section-transition {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-transition::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 50%;
+  height: 1px;
+  width: min(72rem, calc(100% - 2rem));
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(109, 165, 255, 0.5), transparent);
+}
+
+.section-transition-light::before {
+  background: linear-gradient(90deg, transparent, rgba(31, 36, 233, 0.28), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-marquee {
+    width: auto;
+    flex-wrap: wrap;
+    animation: none !important;
+    transform: none;
+  }
+}
